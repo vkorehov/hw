@@ -1,0 +1,10 @@
+Output: Cadnetix Netlist
+Type  : CadnetixNetlist
+From  : Project [dimmer.PrjPCB]
+   Generated File[dimmer.NET]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 00:25:32 On 29/10/2013
