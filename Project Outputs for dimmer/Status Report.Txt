@@ -1,10 +1,27 @@
-Output: Cadnetix Netlist
-Type  : CadnetixNetlist
-From  : Project [dimmer.PrjPCB]
-   Generated File[dimmer.NET]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [dimmer.PrjPCB]
+   Generated File[dimmer.GTL]
+   Generated File[dimmer.GBL]
+   Generated File[dimmer.GPB]
+   Generated File[dimmer.GPT]
+   Generated File[dimmer.GTO]
+   Generated File[dimmer.GTP]
+   Generated File[dimmer.GTS]
+   Generated File[dimmer.GBS]
+   Generated File[dimmer.GBP]
+   Generated File[dimmer.GBO]
+   Generated File[dimmer.GM1]
+   Generated File[dimmer.GM13]
+   Generated File[dimmer.GM15]
+   Generated File[dimmer.GD1]
+   Generated File[dimmer.GG1]
+   Generated File[dimmer.RUL]
+   Generated File[dimmer.EXTREP]
+   Generated File[dimmer.REP]
 
 
-Files Generated   : 1
+Files Generated   : 18
 Documents Printed : 0
 
-Finished Output Generation At 00:25:32 On 29/10/2013
+Finished Output Generation At 18:18:13 On 02/11/2013

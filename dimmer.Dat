@@ -1,0 +1,23 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~dimmer.PrjPCB|ReportField=ProjectFullPath~C:\Users\vlad\Documents\GitHub\hw\dimmer.PrjPCB|ReportField=Title~Bill of Materials For Project [dimmer.PrjPCB] (No PCB Document Selected)|ReportField=TotalQuantity~35|ReportField=ReportTime~01:04:21|ReportField=ReportDate~08/11/2013|ReportField=ReportDateTime~08/11/2013 01:04:21|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~08/11/2013|ReportField=CurrentTime~01:04:20|ReportField=Date~|ReportField=DocumentFullPathAndName~C:\Users\vlad\Documents\GitHub\hw\dimmer.SchDoc|ReportField=DocumentName~dimmer.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~08/11/2013|ReportField=Organization~|ReportField=ProjectName~dimmer.PrjPCB|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~dimmer.PrjPCB|ReportField=DataSourceFullPath~C:\Users\vlad\Documents\GitHub\hw\dimmer.PrjPCB
+Socket|Socket|+5, G, SCL, SDA|PIN1|Socket|4
+0.047uF|Capacitor (Semiconductor SIM Model)|C1|1608[0603]|Cap Semi|1
+0.47uF|Capacitor (Semiconductor SIM Model)|C2|1608[0603]|Cap Semi|1
+S1A|Default Diode|D1|DO-214AC|Diode|1
+2W10G|Full Wave Diode Bridge|D2|2W10G|Bridge1|1
+SMBJ440CA||D3|DO-214AA|SMBJ440CA|1
+PWRCON2X||L|MAINSPIN2x|PWRCON2X|1
+PWRCON||LL|MAINSPIN1|PWRCON|1
+PWRCON2X||N|MAINSPIN3x|PWRCON2X|1
+BC847|NPN Bipolar Transistor|Q1, Q2|SOT-23_N|NPN|2
+BC857|PNP Bipolar Transistor|Q3|SOT-23_N|PNP|1
+FGA20S140P|Insulated Gate Bipolar Transistor (N-Channel)|Q4|FGA20S140P|IGBT-N|1
+22k|Resistor|R1, R3, R4, R5, R6, R7, R8|J1-0603|Res3|7
+3.3k|Resistor|R2, R9, R12|J1-0603|Res3|3
+10k|Resistor|R10|J1-0603|Res3|1
+15k|Resistor|R11|J1-0603|Res3|1
+0.1R 2W|Resistor|R13|R2512|Res3|1
+1/4W|Resistor|R14|R1206|Res3|1
+PIC12F1840||U1|SOIC150-8_N|PIC12F1840|1
+PC3H71|4-Pin Phototransistor Optocoupler|U2, U4|PC3H71|Optoisolator1|2
+PDS1-M||U3|PDS1-M|PDS1-M|1
+TLV431A||ZD1|SOT-23_N|TLV431A|1
