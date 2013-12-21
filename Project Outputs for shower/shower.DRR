@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------
-NCDrill File Report For: shower.PcbDoc   08/11/2013  19:02:20
+NCDrill File Report For: shower.PcbDoc   09/11/2013  12:53:36
 ---------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -7,10 +7,10 @@ ASCII RoundHoles File : shower.TXT
 
 Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
 ---------------------------------------------------------------------------
-T1        28mil (0.7112mm)         Round          31               7.32 Inch (185.89 mm)
+T1        25mil (0.635mm)          Round          31               6.51 Inch (165.40 mm)
 T2        35.43mil (0.89992mm)     Round          51               9.24 Inch (234.60 mm)
 T3        98.43mil (2.50012mm)     Round          2                2.04 Inch (51.69 mm)
 ---------------------------------------------------------------------------
-Totals                                            84               18.59 Inch (472.18 mm)
+Totals                                            84               17.78 Inch (451.69 mm)
 
 Total Processing Time (hh:mm:ss) : 00:00:00

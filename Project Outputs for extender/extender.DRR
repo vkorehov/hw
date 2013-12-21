@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: extender.PcbDoc   08/11/2013  23:54:57
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : extender.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        35.43mil (0.89992mm)     Round          7                1.37 Inch (34.73 mm)
+---------------------------------------------------------------------------
+Totals                                            7                1.37 Inch (34.73 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

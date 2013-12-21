@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: led_panel.PcbDoc   18/11/2013  20:37:53
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : led_panel.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        23.62mil (0.59995mm)     Round          280              54.28 Inch (1378.79 mm)
+---------------------------------------------------------------------------
+Totals                                            280              54.28 Inch (1378.79 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

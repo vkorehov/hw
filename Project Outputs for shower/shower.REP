@@ -38,8 +38,8 @@ Generating : Bottom Layer
 
 Used DCodes :
     D10
-    D13
-    D14
+    D11
+    D15
     D16
     D17
     D20
@@ -62,8 +62,8 @@ Generating : Bottom Pad Master
 
 Used DCodes :
     D10
-    D13
-    D14
+    D11
+    D15
     D22
     D24
     D25
@@ -96,7 +96,7 @@ Generating : Top Overlay
 
 
 Used DCodes :
-    D17
+    D16
     D28
     D29
     D30
@@ -160,8 +160,8 @@ Generating : Bottom Solder
 
 Used DCodes :
     D33
-    D36
-    D37
+    D34
+    D38
     D39
     D40
     D41
@@ -182,8 +182,8 @@ Generating : Bottom Paste
 
 Used DCodes :
     D10
-    D13
-    D14
+    D11
+    D15
     D24
     D25
 *************************************************************
@@ -196,8 +196,8 @@ Generating : Bottom Overlay
 
 
 Used DCodes :
-    D17
-    D28
+    D16
+    D29
     D30
     D31
     D32
@@ -246,7 +246,7 @@ Generating : Drill Drawing
 
 
 Used DCodes :
-    D31
+    D32
     D46
 *************************************************************
 
@@ -260,6 +260,6 @@ Generating : Drill Guide
 
 
 Used DCodes :
-    D31
+    D32
 *************************************************************
 
