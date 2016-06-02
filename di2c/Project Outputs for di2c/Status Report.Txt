@@ -1,0 +1,17 @@
+Source PCB Design di2cx2.PcbDoc contains embedded board array. It is recomended to generate individual BOM for each embedded board PCB design.
+
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [di2c.PrjPcb]
+   Generated File[di2cx2.GTP]
+   Generated File[di2cx2.GBP]
+   Generated File[di2cx2.GM1]
+   Generated File[di2cx2.RUL]
+   Generated File[di2cx2.EXTREP]
+   Generated File[di2cx2.REP]
+
+
+Files Generated   : 6
+Documents Printed : 0
+
+Finished Output Generation At 2:11:41 PM On 4/27/2016

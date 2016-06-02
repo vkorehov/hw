@@ -1,0 +1,16 @@
+﻿Field=#~Integer~#~50|Field=Comment~String~Comment~101|Field=Description~String~Description~101|Field=Designator~String~Designator~101|Field=Footprint~String~Footprint~101|Field=LibRef~String~LibRef~101|Field=Quantity~Integer~Quantity~101|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~di2c.PrjPcb|ReportField=ProjectFullPath~C:\Users\vlad\Documents\GitHub\hw\di2c\di2c.PrjPcb|ReportField=Title~Bill of Materials For Project [di2c.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~28|ReportField=ReportTime~11:44:45 PM|ReportField=ReportDate~4/26/2016|ReportField=ReportDateTime~4/26/2016 11:44:45 PM|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=Application_BuildNumber~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~4/26/2016|ReportField=CurrentTime~11:44:07 PM|ReportField=Date~|ReportField=DocumentFullPathAndName~C:\Users\vlad\Documents\GitHub\hw\di2c\di2c.SchDoc|ReportField=DocumentName~di2c.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~4/26/2016|ReportField=Organization~|ReportField=ProjectName~di2c.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~di2c.PrjPcb|ReportField=DataSourceFullPath~C:\Users\vlad\Documents\GitHub\hw\di2c\di2c.PrjPcb
+1|Cap Pol1|Polarized Capacitor (Radial)|C1, C2|C7343|Cap Pol1|2
+2|Cap Semi|Capacitor (Semiconductor SIM Model)|C1C, C2C|C1812|Cap Semi|2
+3|Cap Semi|Capacitor (Semiconductor SIM Model)|CQ1, CQ2, CU1|C1206|Cap Semi|3
+4|1N5819|Zener Diode|D1|DO214AC|D Zener|1
+5|Inductor|Inductor|L1|CD74R|Inductor|1
+6|Header 6|Header, 6-Pin|P1, P2|HDR1X6|Header 6|2
+7|Header 4|Header, 4-Pin|P3, P4|HDR1X4|Header 4|2
+8|Header 2|Header, 2-Pin|P6|HDR1X2|Header 2|1
+9|PCA82C251|PCA82C251|Q1, Q2|SOIC150-8_M|PCA82C251|2
+10|Res3|Resistor|R1, R2, R7, R10|J1-0603|Res3|4
+11|270|Resistor|R3, R4|R1206|Res3|2
+12|0R|Resistor|R5, R8|R1206|Res3|2
+13|120R|Resistor|R6, R9|R1206|Res3|2
+14|PCA9600D||U1|SOIC150-8_M|P82B96|1
+15|LM2575||U2|KTT|LM2575|1

@@ -154,10 +154,6 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for adapter\adapter.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument13]
-DocumentPath=Project Outputs for adapter\adapter.TXT
-DItemRevisionGUID=
-
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
