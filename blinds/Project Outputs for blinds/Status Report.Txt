@@ -1,0 +1,23 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [blinds.PrjPcb]
+   Generated File[blinds.GTL]
+   Generated File[blinds.GBL]
+   Generated File[blinds.GTO]
+   Generated File[blinds.GTP]
+   Generated File[blinds.GTS]
+   Generated File[blinds.GBS]
+   Generated File[blinds.GBP]
+   Generated File[blinds.GBO]
+   Generated File[blinds.GM1]
+   Generated File[blinds.GM13]
+   Generated File[blinds.GM15]
+   Generated File[blinds.RUL]
+   Generated File[blinds.EXTREP]
+   Generated File[blinds.REP]
+
+
+Files Generated   : 14
+Documents Printed : 0
+
+Finished Output Generation At 11:44:58 PM On 7/28/2017
