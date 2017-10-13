@@ -1,0 +1,26 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [ntcsensor.PrjPcb]
+   Generated File[ntcsensor.GTL]
+   Generated File[ntcsensor.GBL]
+   Generated File[ntcsensor.GPB]
+   Generated File[ntcsensor.GPT]
+   Generated File[ntcsensor.GTO]
+   Generated File[ntcsensor.GTP]
+   Generated File[ntcsensor.GTS]
+   Generated File[ntcsensor.GBS]
+   Generated File[ntcsensor.GBP]
+   Generated File[ntcsensor.GBO]
+   Generated File[ntcsensor.GKO]
+   Generated File[ntcsensor.GM1]
+   Generated File[ntcsensor.GM13]
+   Generated File[ntcsensor.GM15]
+   Generated File[ntcsensor.RUL]
+   Generated File[ntcsensor.EXTREP]
+   Generated File[ntcsensor.REP]
+
+
+Files Generated   : 17
+Documents Printed : 0
+
+Finished Output Generation At 16:50:27 On 11/10/2017
