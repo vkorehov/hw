@@ -1,26 +1,9 @@
-Output: Gerber Files
-Type  : Gerber
+Output: Bill of Materials
+Type  : BOM
 From  : Variant [[No Variations]] of Project [bluenrg.PrjPcb]
-   Generated File[bluienrg.GTL]
-   Generated File[bluienrg.GBL]
-   Generated File[bluienrg.GPB]
-   Generated File[bluienrg.GPT]
-   Generated File[bluienrg.GTO]
-   Generated File[bluienrg.GTP]
-   Generated File[bluienrg.GTS]
-   Generated File[bluienrg.GBS]
-   Generated File[bluienrg.GBP]
-   Generated File[bluienrg.GBO]
-   Generated File[bluienrg.GKO]
-   Generated File[bluienrg.GM1]
-   Generated File[bluienrg.GM13]
-   Generated File[bluienrg.GM15]
-   Generated File[bluienrg.RUL]
-   Generated File[bluienrg.EXTREP]
-   Generated File[bluienrg.REP]
 
 
-Files Generated   : 17
+Files Generated   : 0
 Documents Printed : 0
 
-Finished Output Generation At 12:26:04 AM On 12/22/2017
+Finished Output Generation At 10:10:04 PM On 1/1/2018

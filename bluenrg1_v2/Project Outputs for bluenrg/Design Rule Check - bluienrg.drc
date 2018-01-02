@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\vlad\Documents\GitHub\hw\bluenrg1\bluienrg.PcbDoc
-Date     : 12/22/2017
-Time     : 12:19:13 AM
+PCB File : C:\Users\vlad\Documents\GitHub\hw\bluenrg1_v2\bluienrg.PcbDoc
+Date     : 1/1/2018
+Time     : 2:40:25 PM
 
 Processing Rule : Clearance Constraint (Gap=0.1mm) (InNetClass('RFB')),(All)
 Rule Violations :0
@@ -13,7 +13,8 @@ Processing Rule : Clearance Constraint (Gap=0.5mm) (HasFootprint('BALF-NRG')),(I
 Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=0.2mm) (HasFootprint('BALF-NRG')),(All)
-Rule Violations :0
+   Violation between Clearance Constraint: (0.18mm < 0.2mm) Between Pad B1-G(6.555mm,10.759mm) on Top Layer And Pad B1-AN(6.555mm,10.279mm) on Top Layer 
+Rule Violations :1
 
 Processing Rule : Clearance Constraint (Gap=0.3mm) (InNet('NetA1_ANT')),(InPolygonClass('All Polygons'))
 Rule Violations :0
@@ -79,7 +80,9 @@ Processing Rule : Silk To Solder Mask (Clearance=0.1mm) (HasFootprint('MY_0805')
 Rule Violations :0
 
 Processing Rule : Silk To Solder Mask (Clearance=0.2mm) (IsPad),(All)
-Rule Violations :0
+   Violation between Silk To Solder Mask Clearance Constraint: (0.185mm < 0.2mm) Between Track (6.955mm,11.169mm)(7.555mm,11.169mm) on Top Overlay And Pad B1-RF1(7.555mm,10.759mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.185mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.185mm < 0.2mm) Between Track (6.955mm,9.869mm)(7.555mm,9.869mm) on Top Overlay And Pad B1-RF0(7.555mm,10.279mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.185mm]
+Rule Violations :2
 
 Processing Rule : Silk to Silk (Clearance=0.19mm) (All),(All)
 Rule Violations :0
@@ -91,6 +94,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 0
+Violations Detected : 3
 Waived Violations : 0
-Time Elapsed        : 00:00:19
+Time Elapsed        : 00:00:08
