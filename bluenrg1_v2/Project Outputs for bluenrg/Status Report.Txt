@@ -1,9 +1,11 @@
-Output: Bill of Materials
-Type  : BOM
+Output: Simple BOM
+Type  : SimpleBOM
 From  : Variant [[No Variations]] of Project [bluenrg.PrjPcb]
+   Generated File[bluenrg.BOM]
+   Generated File[bluenrg.CSV]
 
 
-Files Generated   : 0
+Files Generated   : 2
 Documents Printed : 0
 
-Finished Output Generation At 10:10:04 PM On 1/1/2018
+Finished Output Generation At 2:13:05 PM On 2/3/2018
