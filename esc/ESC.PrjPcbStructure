@@ -1,0 +1,8 @@
+Record=TopLevelDocument|FileName=esc.SchDoc
+Record=SheetSymbol|SourceDocument=channel.SchDoc|Designator=U|SchDesignator=U|FileName=driver.SchDoc|SymbolType=Normal|RawFileName=driver.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=channel.SchDoc|Designator=V|SchDesignator=V|FileName=driver.SchDoc|SymbolType=Normal|RawFileName=driver.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=channel.SchDoc|Designator=W|SchDesignator=W|FileName=driver.SchDoc|SymbolType=Normal|RawFileName=driver.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=esc.SchDoc|Designator=C1|SchDesignator=C1|FileName=channel.SchDoc|SymbolType=Normal|RawFileName=channel.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=esc.SchDoc|Designator=C2|SchDesignator=C2|FileName=channel.SchDoc|SymbolType=Normal|RawFileName=channel.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=esc.SchDoc|Designator=C3|SchDesignator=C3|FileName=channel.SchDoc|SymbolType=Normal|RawFileName=channel.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=esc.SchDoc|Designator=C4|SchDesignator=C4|FileName=channel.SchDoc|SymbolType=Normal|RawFileName=channel.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

@@ -1,0 +1,1279 @@
+*
+* File     : signal_schottky_v5.LIB
+* Revision : 5.0
+* Date     : JUNE 2017
+**********************************************************************
+*Please Read Carefully:
+*Information in this document is provided solely in connection with ST products.
+*STMicroelectronics NV and its subsidiaries (“ST”) reserve the right to make :
+*changes, corrections, modifications or improvements, to this document,
+*and the products and services described herein at any time, without notice.
+*All ST products are sold pursuant to ST’s terms and conditions of sale.
+*Purchasers are solely responsible for the choice, selection and use of the ST products, and services described herein,
+*and ST assumes no liability whatsoever relating to the choice, selection or use of the ST products and services described herein.
+*No license, express or implied, by estoppel or otherwise, to any intellectual property rights is granted under this document.
+*If any part of this document refers to any third party products or
+*services it shall not be deemed a license grant by ST for the use of such third party products or
+*services, or any intellectual property contained therein or
+*considered as a warranty covering the use in any manner whatsoever of such third party products or
+*services or any intellectual property contained therein.
+*UNLESS OTHERWISE SET FORTH IN ST’S TERMS AND CONDITIONS OF SALE ST DISCLAIMS ANY EXPRESS OR IMPLIED
+*WARRANTY WITH RESPECT TO THE USE AND/OR SALE OF ST PRODUCTS INCLUDING WITHOUT LIMITATION IMPLIED
+*WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE (AND THEIR EQUIVALENTS UNDER THE LAWS
+*OF ANY JURISDICTION), OR INFRINGEMENT OF ANY PATENT, COPYRIGHT OR OTHER INTELLECTUAL PROPERTY RIGHT.
+*UNLESS EXPRESSLY APPROVED IN WRITING BY AN AUTHORIZED ST REPRESENTATIVE, ST PRODUCTS ARE NOT
+*RECOMMENDED, AUTHORIZED OR WARRANTED FOR USE IN MILITARY, AIR CRAFT, SPACE, LIFE SAVING, OR LIFE SUSTAINING
+*APPLICATIONS, NOR IN PRODUCTS OR SYSTEMS WHERE FAILURE OR MALFUNCTION MAY RESULT IN PERSONAL INJURY,
+*DEATH, OR SEVERE PROPERTY OR ENVIRONMENTAL DAMAGE. ST PRODUCTS WHICH ARE NOT SPECIFIED AS "AUTOMOTIVE
+*GRADE" MAY ONLY BE USED IN AUTOMOTIVE APPLICATIONS AT USER’S OWN RISK.
+*Resale of ST products with provisions different from the statements and/or technical features
+*set forth in this document shall immediately void any warranty granted by ST for the ST product or
+*service described herein and shall not create or extend in any manner whatsoever, any liability of ST.
+*ST and the ST logo are trademarks or registered trademarks of ST in various countries.
+*Information in this document supersedes and replaces all information previously supplied.
+*The ST logo is a registered trademark of STMicroelectronics.
+*All other names are the property of their respective owners.
+*
+*© 2006 STMicroelectronics - All rights reserved
+*
+*STMicroelectronics group of companies
+*Australia - Belgium - Brazil - Canada - China - Czech Republic - Finland - France
+*Germany - Hong Kong - India - Israel - Italy - Japan - Malaysia - Malta - Morocco
+*Singapore - Spain - Sweden - Switzerland - United Kingdom - United States of America
+*www.st.com
+*
+*******************************************************************
+* SMALL SIGNAL SCHOTTKY DIODE 20V,30V & 40V                 L53
+*******************************************************************
+* SMALL SIGNAL SCHOTTKY DIODE 60V,70V,80V & 100V            L655
+*******************************************************************
+
+
+*******************************************************************
+* Model name       : BAT60JFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-323
+*******************************************************************
+*.MODEL BAT60JFILM D IS=20.053E-9 N=.93972 RS=.18722 IKF=614.92 CJO=101.96E-12
++ M=.39267 VJ=.3905 ISR=650.19E-9 NR=4.9950 EG=.69 XTI=2 FC=0.5 TT=0
+*$
+*******************************************************************
+* Model name       : BAT20JFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-323
+*******************************************************************
+.MODEL BAT20JFILM D IS=191.05E-9 N=.97065 RS=.14831 IKF=402.03 CJO=68.280E-12
++ M=.46842 VJ=.3905 ISR=2.1080E-6 NR=4.9950 EG=.69 XTI=2 FC=0.5 TT=0
+*$
+*******************************************************************
+* Model name       : BAT30JFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-323
+*******************************************************************
+.MODEL BAT30JFILM D IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 CJO=23.639E-12
++ M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 EG=.69 XTI=2 FC=0.5 TT=0
+*$
+*******************************************************************
+* Model name       : BAT30KFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-523
+*******************************************************************
+.MODEL BAT30KFILM D IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 CJO=23.639E-12
++ M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 EG=.69 XTI=2 FC=0.5 TT=0
+*$
+*******************************************************************
+* Model name       : BAT30FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT30FILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAT30FILM	A K
+d1 A K dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30AFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT30AFILM   cathode2
+*		    		| cathode1
+*		    		| | anode
+*		    		| | |
+.subckt BAT30AFILM  1 2 3
+d1 3 2 dx
+d2 3 1 dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30CFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT30CFILM   anode2
+*		    		| anode1
+*		    		| | cathode
+*		    		| | |
+.subckt BAT30CFILM  1 2 3
+d1 2 3 dx
+d2 1 3 dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30SFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT30SFILM   anode2
+*		    		| cathode1
+*		    		| | anode1-cathode2
+*		    		| | |
+.subckt BAT30SFILM  1 2 3
+d1 3 2 dx
+d2 1 3 dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30WFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT30WFILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAT30WFILM	A K
+d1 A K dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30AWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT30AWFILM  cathode1
+*		    		| cathode2
+*		    		| | anode
+*		    		| | |
+.subckt BAT30AWFILM 1 2 3
+d1 3 1 dx
+d2 3 2 dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30CWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT30CWFILM  anode2
+*		    		| anode1
+*		   			| | cathode
+*		    		| | |
+.subckt BAT30CWFILM 1 2 3
+d1 1 3 dx
+d2 2 3 dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30SWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT30SWFILM  anode1
+*		    		| cathode2
+*		    		| | anode2-cathode1
+*		    		| | |
+.subckt BAT30SWFILM 1 2 3
+d1 1 3 dx
+d2 3 2 dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30-07P6FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-666
+*******************************************************************
+*model BAT30-07P6FILM   anode1
+*		    			| anode2
+*		    			| | cathode2
+*		    			| | | cathode1
+*						| | | |  
+*						| | | | 
+*						| | | |             
+.subckt BAT30-07P6FILM  1 3 4 6 
+d1 1 6 dx
+d2 3 4 dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-666   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30-09P6FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-666
+*******************************************************************
+*model BAT30-09P6FILM   anode1
+*		    			| cathode2
+*		    			| | anode2
+*		    			| | | cathode1
+*						| | | |  
+*						| | | | 
+*						| | | | 
+.subckt BAT30-09P6FILM  1 3 4 6
+d1 1 6 dx
+d2 4 3 dx
+.model dx	D(IS=49.329E-9 N=1.0079 RS=.41244 IKF=93.330 EG=.69 XTI=2 CJO=23.639E-12
++			M=.42373 VJ=.3905 ISR=102.98E-9 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-666   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT30F3
+* Description      : Small Signal Schottky Diode
+* Package type     : F3 (Flip-Chip)
+*******************************************************************
+.MODEL BAT30F3 D IS=260.86E-9 N=1.0857 RS=.25581 IKF=36.310 CJO=47.747E-12
++ M=.48163 VJ=.52398 ISR=208.49E-9 NR=4.9950 FC=0.5 TT=0 XTI=2 EG=0.69
+*$
+*******************************************************************
+* Model name       : BAT30F4
+* Description      : Small Signal Schottky Diode
+* Package type     : 0201 (Flip-Chip)
+*******************************************************************
+.MODEL BAT30F4 D IS=479.07E-9 N=0.99901 RS=0.71845 IKF=70.783 CJO=18.198E-12 M=0.49204
++ VJ=.3905 ISR=646.77E-9 NR=4.9950 TT=0 FC=0.5 XTI=2 EG=0.69
+*$
+*******************************************************************
+* Model name       : BAR42FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAR42FILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAR42FILM	A K
+d1 A K dx
+.model dx	D(IS=480.77E-6 N=4.9950 RS=40.150E-3 IKF=20.507 EG=.69 XTI=2 CJO=13.698E-12
++			M=.50005 VJ=.38464 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAR43FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAR43FILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAR43FILM	A K
+d1 A K dx
+.model dx	D(IS=480.77E-6 N=4.9950 RS=40.150E-3 IKF=20.507 EG=.69 XTI=2 CJO=13.698E-12
++			M=.50005 VJ=.38464 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAR43AFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAR43AFILM   cathode2
+*		    		| cathode1
+*		    		| | anode
+*		    		| | |
+.subckt BAR43AFILM  1 2 3
+d1 3 2 dx
+d2 3 1 dx
+.model dx	D(IS=480.77E-6 N=4.9950 RS=40.150E-3 IKF=20.507 EG=.69 XTI=2 CJO=13.698E-12
++			M=.50005 VJ=.38464 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAR43CFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAR43CFILM   anode1
+*		    		| anode2
+*		    		| | cathode
+*		    		| | |
+.subckt BAR43CFILM  1 2 3
+d1 1 3 dx
+d2 2 3 dx
+.model dx	D(IS=480.77E-6 N=4.9950 RS=40.150E-3 IKF=20.507 EG=.69 XTI=2 CJO=13.698E-12
++			M=.50005 VJ=.38464 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAR43SFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAR43SFILM   anode2
+*		    		| cathode1
+*		    		| | anode1-cathode2
+*		    		| | |
+.subckt BAR43SFILM  1 2 3
+d1 3 2 dx
+d2 1 3 dx
+.model dx	D(IS=0.4345E-6 N=1.4622 RS=.51075 IKF=7.3753E-3 CJO=8.2434E-12
++ M=1.2781 VJ=9.9900 ISR=10.01E-21 NR=4.9950 TT=5.0000E-9
++ XTI=2 EG=0.69 FC=0.5)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT42
+* Description      : Small Signal Schottky Diode
+* Package type     : DO35
+*******************************************************************
+.MODEL BAT42 D IS=480.77E-6 N=4.9950 RS=40.150E-3 IKF=20.507
++ EG=.69 XTI=2 CJO=13.698E-12 M=.50005 VJ=.38464 ISR=10.010E-21
++ FC=0.5 NR=4.9950 TT=0
+*$
+*******************************************************************
+* Model name       : TMMBAT42FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : Minimelf
+*******************************************************************
+.MODEL TMMBAT42FILM D IS=480.77E-6 N=4.9950 RS=40.150E-3 IKF=20.507
++ EG=.69 XTI=2 CJO=13.698E-12 M=.50005 VJ=.38464 ISR=10.010E-21
++ FC=0.5 NR=4.9950 TT=0
+*$
+*******************************************************************
+* Model name       : BAT43
+* Description      : Small Signal Schottky Diode
+* Package type     : DO35
+*******************************************************************
+.MODEL BAT43 D IS=480.77E-6 N=4.9950 RS=40.150E-3 IKF=20.507
++ EG=.69 XTI=2 CJO=13.698E-12 M=.50005 VJ=.38464 ISR=10.010E-21
++ FC=0.5 NR=4.9950 TT=0
+*$
+*******************************************************************
+* Model name       : TMMBAT43FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : Minimelf
+*******************************************************************
+.MODEL TMMBAT43FILM D IS=480.77E-6 N=4.9950 RS=40.150E-3 IKF=20.507
++ EG=.69 XTI=2 CJO=13.698E-12 M=.50005 VJ=.38464 ISR=10.010E-21
++ FC=0.5 NR=4.9950 TT=0
+*$
+*******************************************************************
+* Model name       : BAT54JFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-323
+*******************************************************************
+.MODEL BAT54JFILM D
++ IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0
+*$
+*******************************************************************
+* Model name       : BAT54KFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-523
+*******************************************************************
+.MODEL BAT54KFILM D
++ IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0
+*$
+*******************************************************************
+* Model name       : BAT54ZFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-123
+*******************************************************************
+.MODEL BAT54ZFILM D
++ IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0
+*$
+*******************************************************************
+* Model name       : BAT54FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT54FILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAT54FILM	A K
+d1 A K dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++			VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54AFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT54AFILM   cathode2
+*		    		| cathode1
+*		    		| | anode
+*		    		| | |
+.subckt BAT54AFILM  1 2 3
+d1 3 2 dx
+d2 3 1 dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ 		VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54CFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT54CFILM   anode2
+*		    		| anode1
+*		    		| | cathode
+*		    		| | |
+.subckt BAT54CFILM  1 2 3
+d1 2 3 dx
+d2 1 3 dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ 		VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54SFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT54SFILM   anode2
+*		    		| cathode1
+*		    		| | anode1-cathode2
+*		    		| | |
+.subckt BAT54SFILM  1 2 3
+d1 3 2 dx
+d2 1 3 dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ 		VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54WFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT54WFILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAT54WFILM	A K
+d1 A K dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++			VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54AWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT54AWFILM  cathode1
+*		    		| cathode2
+*		    		| | anode
+*		    		| | |
+.subckt BAT54AWFILM 1 2 3
+d1 3 1 dx
+d2 3 2 dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ 		VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54CWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT54CWFILM  anode2
+*		    		| anode1
+*		   			| | cathode
+*		    		| | |
+.subckt BAT54CWFILM 1 2 3
+d1 1 3 dx
+d2 2 3 dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ 		VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54SWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT54SWFILM  anode1
+*		    		| cathode2
+*		    		| | anode2-cathode1
+*		    		| | |
+.subckt BAT54SWFILM 1 2 3
+d1 1 3 dx
+d2 3 2 dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ 		VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54-07P6FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-666
+*******************************************************************
+*model BAT54-07P6FILM   anode1
+*		    			| anode2
+*		    			| | cathode2
+*		    			| | | cathode1
+*						| | | |  
+*						| | | | 
+*						| | | |             
+.subckt BAT54-07P6FILM  1 3 4 6 
+d1 1 6 dx
+d2 3 4 dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ 		VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-666   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT54-09P6FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-666
+*******************************************************************
+*model BAT54-09P6FILM   anode1
+*		    			| cathode2
+*		    			| | anode2
+*		    			| | | cathode1
+*						| | | |  
+*						| | | | 
+*						| | | | 
+.subckt BAT54-09P6FILM  1 3 4 6
+d1 1 6 dx
+d2 4 3 dx
+.model dx	D(IS=199.80E-9 N=1.5145 RS=.2508 IKF=2.9971E-3 CJO=9.4409E-12 M=.40749
++ 		VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0)
+*	STMicroelectronics	case=SOT-666   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT47
+* Description      : Small Signal Schottky Diode
+* Package type     : DO35
+*******************************************************************
+.MODEL BAT47 D IS=263.91E-9 N=1.0966 RS=.4109 IKF=29.589E-3
++ EG=.69 XTI=2 CJO=29.800E-12 M=.50094 VJ=.41054 ISR=90.294E-9
++ FC=0.5 NR=4.9949 TT=0
+*$
+*******************************************************************
+* Model name       : BAT48
+* Description      : Small Signal Schottky Diode
+* Package type     : DO35
+*******************************************************************
+.MODEL BAT48 D IS=263.91E-9 N=1.0966 RS=.4109 IKF=29.589E-3
++ EG=.69 XTI=2 CJO=29.800E-12 M=.50094 VJ=.41054 ISR=90.294E-9
++ FC=0.5 NR=4.9949 TT=0
+*$
+*******************************************************************
+* Model name       : TMMBAT48FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : Minimelf
+*******************************************************************
+.MODEL TMMBAT48FILM D IS=263.91E-9 N=1.0966 RS=.4109 IKF=29.589E-3
++ EG=.69 XTI=2 CJO=29.800E-12 M=.50094 VJ=.41054 ISR=90.294E-9
++ FC=0.5 NR=4.9949 TT=0
+*$
+*******************************************************************
+* Model name       : BAT48ZFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-123
+*******************************************************************
+.MODEL BAT48ZFILM D IS=263.91E-9 N=1.0966 RS=.4109 IKF=29.589E-3
++ EG=.69 XTI=2 CJO=29.800E-12 M=.50094 VJ=.41054 ISR=90.294E-9
++ FC=0.5 NR=4.9949 TT=0
+*$
+*******************************************************************
+* Model name       : BAT48JFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-323
+*******************************************************************
+.MODEL BAT48JFILM D IS=263.91E-9 N=1.0966 RS=.4109 IKF=29.589E-3
++ EG=.69 XTI=2 CJO=29.800E-12 M=.50094 VJ=.41054 ISR=90.294E-9
++ FC=0.5 NR=4.9949 TT=0
+*$
+*******************************************************************
+* Model name       : TMBYV10-40FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : MELF
+*******************************************************************
+.MODEL TMBYV10-40FILM D IS=1.2127E-6 N=1.0363 RS=51.570E-3 IKF=.26226
++ CJO=203.44E-12 M=.45974 VJ=.40017 ISR=1.4952E-6 NR=5
++ FC=0.5 TT=0 XTI=2 EG=0.69
+*$
+*******************************************************************
+* Model name       : TMBYV10-60FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : MELF
+*******************************************************************
+.MODEL TMBYV10-60FILM D
++ IS=13.801E-6 N=1.5524 RS=43.360E-3 IKF=89.845E-3 CJO=135.35E-12 M=.44898
++ VJ=.3905 ISR=10.010E-21 NR=4.9950 FC=0.5 TT=0 XTI=2 EG=0.69
+*$
+
+
+*******************************************************************
+* SMALL SIGNAL SCHOTTKY DIODE 60V,70V,80V & 100V
+*******************************************************************
+*******************************************************************
+* Model name       : 1N6263
+* Description      : Small signal Schottky diode
+* Package type     : DO35
+*******************************************************************
+.MODEL 1N6263 D IS=3.8736E-9 N=1.0099 RS=31.514 IKF=18.247 CJO=1.7738E-12
++ M=.1955 VJ=.3905 ISR=6.2866E-9 NR=3.9204 FC=0.5 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : TMM6263FILM
+* Description      : Small signal Schottky diode
+* Package type     : Minimelf
+*******************************************************************
+.MODEL TMM6263FILM D IS=3.8736E-9 N=1.0099 RS=31.514 IKF=18.247 CJO=1.7738E-12
++ M=.1955 VJ=.3905 ISR=6.2866E-9 NR=3.9204 FC=0.5 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : 1N5711
+* Description      : Small signal Schottky diode
+* Package type     : DO35
+*******************************************************************
+.MODEL 1N5711 D IS=5.5987E-9 N=1.0023 RS=30.053 IKF=19.036 CJO=1.7605E-12
++ M=.20029 VJ=.3905 ISR=24.229E-9 NR=4.1695 FC=0.5 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : BAR18FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAR18FILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAR18FILM	A K
+d1 A K dx
+.model dx	D(IS=2.2017E-18 N=.2 RS=48.717 IKF=2.3793 CJO=1.4285E-12
++ M=.20134 VJ=.3905 ISR=12.216E-9 NR=4.9950 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70JFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-323
+*******************************************************************
+.MODEL BAS70JFILM D
++ IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : BAS70KFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-523
+*******************************************************************
+.MODEL BAS70KFILM D
++ IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : BAS70ZFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-123
+*******************************************************************
+.MODEL BAS70ZFILM D
++ IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : BAS70FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAS70FILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAS70FILM	A K
+d1 A K dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-06FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAS70-06FILM 	cathode2
+*		    			| cathode1
+*		    			| | anode
+*		    			| | |
+.subckt BAS70-06FILM	1 2 3
+d1 3 2 dx
+d2 3 1 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-05FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAS70-05FILM		anode2
+*		    			| anode1
+*		    			| | cathode
+*		    			| | |
+.subckt BAS70-05FILM	1 2 3
+d1 2 3 dx
+d2 1 3 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-04FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAS70-04FILM		anode2
+*		    			| cathode1
+*		    			| | anode1-cathode2
+*		    			| | |
+.subckt BAS70-04FILM	1 2 3
+d1 3 2 dx
+d2 1 3 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70WFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAS70WFILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAS70WFILM	A K
+d1 A K dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-06WFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAS70-06WFILM	cathode1
+*		    			| cathode2
+*		    			| | anode
+*		    			| | |
+.subckt BAS70-06WFILM	1 2 3
+d1 3 1 dx
+d2 3 2 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-05WFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAS70-05WFILM	anode1
+*		    			| anode2
+*		   				| | cathode
+*		    			| | |
+.subckt BAS70-05WFILM	1 2 3
+d1 1 3 dx
+d2 2 3 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-04WFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAS70-04WFILM	anode1
+*		    			| cathode2
+*		    			| | anode2-cathode1
+*		    			| | |
+.subckt BAS70-04WFILM	1 2 3
+d1 1 3 dx
+d2 3 2 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-07P6FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-666
+*******************************************************************
+*model BAS70-07P6FILM   anode1
+*		    			| anode2
+*		    			| | cathode2
+*		    			| | | cathode1
+*						| | | |  
+*						| | | | 
+*						| | | |             
+.subckt BAS70-07P6FILM  1 3 4 6 
+d1 1 6 dx
+d2 3 4 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-666   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-09P6FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-666
+*******************************************************************
+*model BAS70-09P6FILM   anode1
+*		    			| cathode2
+*		    			| | anode2
+*		    			| | | cathode1
+*						| | | |  
+*						| | | | 
+*						| | | | 
+.subckt BAS70-09P6FILM  1 3 4 6
+d1 1 6 dx
+d2 4 3 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-666   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAS70-08SFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323-6L
+*******************************************************************
+*model BAS70-08SFILM	anode1
+*		    			| anode2
+*		    			| | anode3
+*		    			| | | cathode3
+*						| | | | cathode2
+*		    			| | | | | cathode1  
+*						| | | |	| |
+.subckt BAS70-08SFILM	1 2 3 4 5 6
+d1 1 6 dx
+d2 2 5 dx
+d3 3 4 dx
+.model dx	D(IS=10.000E-21 N=.28507 RS=44.478 IKF=3.7039 CJO=1.3655E-12 M=.29447
++ VJ=.3905 ISR=4.9517E-9 NR=4.5782 FC=0.5 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323-6L   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT41
+* Description      : Small Signal Schottky Diode
+* Package type     : DO35
+*******************************************************************
+.MODEL BAT41 D
++ IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++ M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2
+*$
+*******************************************************************
+* Model name       : TMMBAT41FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : Minimelf
+*******************************************************************
+.MODEL TMMBAT41FILM D
++ IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++ M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2
+*$
+*******************************************************************
+* Model name       : BAT41JFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-323
+*******************************************************************
+.MODEL BAT41JFILM D
++ IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++ M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2
+*$
+*******************************************************************
+* Model name       : BAT41KFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-523
+*******************************************************************
+.MODEL BAT41KFILM D
++ IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++ M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2
+*$
+*******************************************************************
+* Model name       : BAT41ZFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-123
+*******************************************************************
+.MODEL BAT41ZFILM D
++ IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++ M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2
+*$
+*******************************************************************
+* Model name       : BAT41WFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT41WFILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAT41WFILM	A K
+d1 A K dx
+.model dx	D(IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++			M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT41AWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT41AWFILM  cathode1
+*		    		| cathode2
+*		    		| | anode
+*		    		| | |
+.subckt BAT41AWFILM 1 2 3
+d1 3 1 dx
+d2 3 2 dx
+.model dx	D(IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++			M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT41CWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT41CWFILM  anode1
+*		    		| anode2
+*		   			| | cathode
+*		    		| | |
+.subckt BAT41CWFILM 1 2 3
+d1 1 3 dx
+d2 2 3 dx
+.model dx	D(IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++			M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT41SWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT41SWFILM  anode1
+*		    		| cathode2
+*		    		| | anode2-cathode1
+*		    		| | |
+.subckt BAT41SWFILM 1 2 3
+d1 1 3 dx
+d2 3 2 dx
+.model dx	D(IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++			M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT41-07P6FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-666
+*******************************************************************
+*model BAT41-07P6FILM   anode1
+*		    			| anode2
+*		    			| | cathode2
+*		    			| | | cathode1
+*						| | | |  
+*						| | | | 
+*						| | | |             
+.subckt BAT41-07P6FILM  1 3 4 6
+d1 1 6 dx
+d2 3 4 dx
+.model dx	D(IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++			M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2)
+*	STMicroelectronics	case=SOT-666   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT41-09P6FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-666
+*******************************************************************
+*model BAT41-09P6FILM   anode1
+*		    			| cathode2
+*		    			| | anode2
+*		    			| | | cathode1
+*						| | | |  
+*						| | | | 
+*						| | | | 
+.subckt BAT41-09P6FILM  1 3 4 6 
+d1 1 6 dx
+d2 4 3 dx
+.model dx	D(IS=10.000E-9 N=1.4402 RS=.12219 IKF=291.59E-6 EG=.69 CJO=3.5613E-12
++			M=.49981 VJ=.36559 ISR=2.0076E-9 FC=0.5 NR=4.9950 TT=0  XTI=2)
+*	STMicroelectronics	case=SOT-666   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAR46FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAR46FILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAR46FILM	A K
+d1 A K dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAR46AFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAR46AFILM   cathode1
+*		    		| cathode2
+*		    		| | anode
+*		    		| | |
+.subckt BAR46AFILM  1 2 3
+d1 3 1 dx
+d2 3 2 dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT46
+* Description      : Small Signal Schottky Diode
+* Package type     : DO-35
+*******************************************************************
+.MODEL BAT46 D
++ IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++ M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : TMMBAT46FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : Minimelf
+*******************************************************************
+.MODEL TMMBAT46FILM D
++ IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++ M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : BAT46JFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-323
+*******************************************************************
+.MODEL BAT46JFILM D
++ IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++ M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : BAT46ZFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOD-123
+*******************************************************************
+.MODEL BAT46ZFILM D
++ IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++ M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2
+*$
+*******************************************************************
+* Model name       : BAT46FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT46FILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAT46FILM	A K
+d1 A K dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT46AFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT46AFILM   cathode1
+*		    		| cathode2
+*		    		| | anode
+*		    		| | |
+.subckt BAT46AFILM  1 2 3
+d1 3 1 dx
+d2 3 2 dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT46CFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT46CFILM   anode1
+*		    		| anode2
+*		   			| | cathode
+*		    		| | |
+.subckt BAT46CFILM  1 2 3
+d1 1 3 dx
+d2 2 3 dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT46SFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-23
+*******************************************************************
+*model BAT46SFILM   anode1
+*		    		| cathode2
+*		    		| | anode2-cathode1
+*		    		| | |
+.subckt BAT46SFILM  1 2 3
+d1 1 3 dx
+d2 3 2 dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-23   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT46WFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT46WFILM 	anode
+*		    		| cathode
+*		    		| |
+.subckt BAT46WFILM	A K
+d1 A K dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT46AWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT46AWFILM  cathode1
+*		    		| cathode2
+*		    		| | anode
+*		    		| | |
+.subckt BAT46AWFILM 1 2 3
+d1 3 1 dx
+d2 3 2 dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT46CWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT46CWFILM  anode1
+*		    		| anode2
+*		   			| | cathode
+*		    		| | |
+.subckt BAT46CWFILM 1 2 3
+d1 1 3 dx
+d2 2 3 dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : BAT46SWFILM
+* Description      : Small Signal Schottky Diode
+* Package type     : SOT-323
+*******************************************************************
+*model BAT46SWFILM  anode1
+*		    		| cathode2
+*		    		| | anode2-cathode1
+*		    		| | |
+.subckt BAT46SWFILM 1 2 3
+d1 1 3 dx
+d2 3 2 dx
+.model dx	D(IS=15.896E-6 N=2.3964 RS=7.7928E-3 IKF=5.4695E-3 EG=.69 CJO=11.684E-12
++			M=.5 VJ=.36094 ISR=10.010E-21 FC=0.5 NR=4.9950 TT=0 XTI=2)
+*	STMicroelectronics	case=SOT-323   Delivery= Tape&reel
+.ends
+*$
+*******************************************************************
+* Model name       : TMMBAT49FILM
+* Description      : Small Signal Schottky Diode
+* Package type     : Minimelf
+*******************************************************************
+.MODEL TMMBAT49FILM D IS=2.0092E-6 N=1.2284 RS=.5943 IKF=48.097E-3
++ EG=.69 XTI=2 CJO=121.60E-12 M=.49999 VJ=.37776 ISR=174.49E-9
++ FC=0.5 NR=4.1388 TT=0
+*-------------------------------------
+*THANKS TO USE THE ST'S PRODUCTS
+*-------------------------------------
+* End of library.
+*$
