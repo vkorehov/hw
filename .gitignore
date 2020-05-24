@@ -233,3 +233,8 @@ pip-log.txt
 /bluenrg1_v2/History/*.Zip
 /bluenrg1_v2/History/C0BB4EA0/*.Zip
 /bluenrg1_v2/Project Outputs for bluenrg/*.zip
+/Sender/History
+/Sender/Project Logs for Sender
+/Recv/History
+/Recv/Project Outputs for Recv
+/Recv/__Previews
